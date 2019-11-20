@@ -1,0 +1,33 @@
+$purple: #6505cc;
+
+body {
+  font-family: sans-serif;
+  background: #eedbff;
+  color: $purple;
+}
+
+button {
+  display: inline-block;
+  border: 1px solid $purple;
+  color: $purple;
+  background: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.pop-up__open {
+  &[aria-expanded="true"] + ul {
+    display: block;
+  }
+
+  &[aria-expanded="false"] + ul {
+    display: none;
+  }
+}

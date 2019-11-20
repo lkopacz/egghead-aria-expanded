@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Egghead Aria Expanded</title>
+  </head>
+  <body>
+    <h1>Aria Expanded Demo</h1>
+    <button class="pop-up__open">Helpful links</button>
+    <ul class="pop-up__items">
+      <li>
+        <a href="http://google.com/">Google</a>
+      </li>
+      <li>
+        <a href="http://google.com/">Stack Overflow</a>
+      </li>
+      <li>
+        <a href="https://dev.to/">Dev.to</a>
+      </li>
+    </ul>
+    <script>
+      const showButton = document.querySelector(".pop-up__open");
+      showButton.setAttribute("aria-expanded", false);
+
+      showButton.addEventListener("click", () => {
+        const ariaExpanded = showButton.getAttribute("aria-expanded"); // This will return a string
+
+        if (ariaExpanded === "true") {
+          showButton.setAttribute("aria-expanded", false);
+        } else {
+          showButton.setAttribute("aria-expanded", true);
+        }
+      });
+    </script>
+  </body>
+</html>
